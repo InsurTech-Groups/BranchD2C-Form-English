@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { userData } from '../data/userData';
 import axios from 'axios';
 import PhoneInput from "react-phone-number-input/input";
-import { postDataToJangle } from '../data/postToJangle';
+import { postDataToBranch } from '../data/PostDataToBranch';
 
 
 const EmailPhone = () => {
@@ -17,7 +17,7 @@ const EmailPhone = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const [isAutoCorrect, setIsAutoCorrect] = useState(false)
   const [autoCorrectText, setAutoCorrectText] = useState('')
-  const aK = import.meta.VITE_PHONE_API_KEY;
+  const aK = import.meta.env.VITE_PHONE_API_KEY;
 
 
   let e = userData.email;
@@ -40,7 +40,7 @@ const EmailPhone = () => {
 
   const handleEmail = (e) => {
 
-    const apiKey = import.meta.VITE_EMAIL_API_KEY; 
+    const apiKey = import.meta.env.VITE_EMAIL_API_KEY; 
 let email = document.getElementById('email').value
 
 
@@ -117,7 +117,7 @@ let email = document.getElementById('email').value
       }
       else {
       //TODO: Add to userData
-      postDataToJangle();
+      postDataToBranch();
         navigate('/submit')
       }
     })

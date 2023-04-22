@@ -5,6 +5,7 @@ import { LinkWithQuery } from "../components/BackButton";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { userData } from '../data/userData';
+import { nameUserData } from '../data/addToUserData';
 
 const Name = () => {
 
@@ -42,7 +43,7 @@ const Name = () => {
     }
     else {
       setIsButtonDisabled(false);
-      //TODO: Add to userData
+      nameUserData(first, last)
       navigate('/email-phone')
     }
     

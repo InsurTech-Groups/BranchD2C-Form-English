@@ -47,7 +47,7 @@ function ZipCode() {
 
   useEffect(() => {
 
-    const apiKey = import.meta.VITE_IPAPI_KEY;
+    const apiKey = import.meta.env.VITE_IPAPI_KEY;
 
     const req = {
       async: true,
@@ -157,7 +157,7 @@ function ZipCode() {
   
       landingPageData(id, zipCodeValue, cityValue, stateValue, ipValue, url)
       
-      navigate('/business-name');
+      navigate('/address');
     }
 
   }

@@ -6,6 +6,7 @@ import CTA from "../components/CTA";
 import { LinkWithQuery } from "../components/BackButton";
 import { toast } from "react-toastify";
 import { userData } from "../data/userData";
+import { addressUserData } from "../data/addToUserData";
 import { AddressAutofill } from "@mapbox/search-js-react";
 
 function Address() {
@@ -46,8 +47,8 @@ function Address() {
     else {
       street = street + ' ' + secondary;
 
-      //TODO: Add to userData
-    navigate('/name')
+      addressUserData(street, city, state, zipcode)
+    navigate('/dob')
     }
 
     

@@ -12,7 +12,7 @@ function LandingPage() {
   // TODO: Add Specific Form Type
   // TODO: Add Specific Form Header
 
-  let formType = ""
+  let formType = 'Auto Insurance'
 
   useEffect(() => {
     ipAddress();

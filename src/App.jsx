@@ -12,6 +12,9 @@ import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
 
 import Address from './questions/Address';
+import DOB from './questions/DOB';
+import Gender from './questions/Gender';
+import Relationship from './questions/Relationship';
 import Name from './questions/Name';
 import EmailPhone from './questions/EmailPhone';
 import Submit from './questions/Submit';
@@ -37,6 +40,11 @@ export default function App() {
        
         
         <Route path='/address' element={<Address />} />
+        <Route path='dob' element={<DOB />} />
+        <Route path='/gender' element={<Gender />} />
+        <Route path='/relationship' element={<Relationship />} />
+
+
         <Route path='/name' element={<Name />} />
         <Route path='/email-phone' element={<EmailPhone />} />
         <Route path='/submit' element={<Submit />} />

@@ -2,7 +2,7 @@ import { userData } from "../data/userData";
 
 export const ipAddress = async (ip) => {
 
-  let apiKey = import.meta.VITE_IP_API_KEY;
+  let apiKey = import.meta.env.VITE_IP_API_KEY;
 
   let ipAddress = localStorage.getItem('ip');
 
