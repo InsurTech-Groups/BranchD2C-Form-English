@@ -1,11 +1,35 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+
 import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer'
+import { terser } from 'rollup-plugin-terser'
+import imageminPlugin from 'vite-plugin-imagemin'
+import ssr from 'vite-plugin-ssr/plugin'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
 
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src/main.jsx')
+    }
+  }, 
+  plugins: [
+    react(),
+    tailwindcss(),
+    imageminPlugin({
+      gifsicle: { optimizationLevel: 3, interlaced: true },
+      mozjpeg: { quality: 75, progressive: true },
+      optipng: { optimizationLevel: 7 },
+      pngquant: { quality: [0.75, 0.9], speed: 1 },
+      svgo: { plugins: [{ removeViewBox: false }] },
+      cache: true,
+    }),
+    ssr(),
+  ],
+  appType: 'spa',
   preview: {
     port: 3000,
     open: true,
@@ -14,25 +38,39 @@ export default defineConfig({
   optimizeDeps: {
     include: ['linked-dep'],
   },
+  mode: 'production',
   build: {
+    sourcemap: true,
+    ssrManifest: true,
     commonjsOptions: {
       include: [/linked-dep/, /node_modules/],
     },
 
-    rollupOptions: {
-      output:{
-          manualChunks(id) {
-              if (id.includes('node_modules')) {
-                  return id.toString().split('node_modules/')[1].split('/')[0].toString();
-              }
-          }
+    server: {
+      hmr: {
+        port: 443
       }
-  }
+    },
+
+    rollupOptions: {
+      plugins: [terser()],
+        input: 'main.jsx',
+      output: {
+        manualChunks(id) {
+          if (id.includes('/src/')) {
+            return 'app';
+          }
+          if (id.includes('/node_modules/')) {
+            return 'vendor';
+          }
+        }
+      }
+    }
   },
 
   css: {
     postcss: {
-      plugins: [tailwindcss],
+      plugins: [tailwindcss(), autoprefixer()]
     },
   },
 })

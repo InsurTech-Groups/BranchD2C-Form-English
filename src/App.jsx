@@ -23,6 +23,27 @@ import ThankYou from './questions/ThankYou';
 
 export default function App() {
 
+  useEffect(() => {
+    // Save userData to session storage when the user reloads or leaves the page
+    window.addEventListener('beforeunload', (event) => {
+      sessionStorage.setItem('userData', JSON.stringify(userData));
+      event.returnValue = 'Are you sure you want to leave?';
+    });
+
+    // Check if there is userData in session storage and update the userData object
+    const storedUserData = sessionStorage.getItem('userData');
+    if (storedUserData) {
+      try {
+        const parsedUserData = JSON.parse(storedUserData);
+        Object.assign(userData, parsedUserData);
+      } catch (error) {
+        console.error('Error parsing stored userData', error);
+      }
+    }
+
+  }, [])
+
+
   //store userData in a session storage 
   useEffect(() => {
     sessionStorage.setItem('userData local', userData)
