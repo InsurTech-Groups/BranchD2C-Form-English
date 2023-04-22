@@ -5,7 +5,6 @@ import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import { terser } from 'rollup-plugin-terser'
 import imageminPlugin from 'vite-plugin-imagemin'
-import ssr from 'vite-plugin-ssr/plugin'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -27,7 +26,6 @@ export default defineConfig({
       svgo: { plugins: [{ removeViewBox: false }] },
       cache: true,
     }),
-    ssr(),
   ],
   appType: 'spa',
   preview: {
@@ -41,7 +39,6 @@ export default defineConfig({
   mode: 'production',
   build: {
     sourcemap: true,
-    ssrManifest: true,
     commonjsOptions: {
       include: [/linked-dep/, /node_modules/],
     },
