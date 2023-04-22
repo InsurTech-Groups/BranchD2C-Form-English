@@ -1,4 +1,4 @@
 export default {
-  input: 'src/main.js', // specify the entry point of your application
+  input: 'src/main.jsx', // specify the entry point of your application
   // ...
 }
