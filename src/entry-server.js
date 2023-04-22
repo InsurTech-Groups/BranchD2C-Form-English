@@ -28,7 +28,7 @@ export async function render(url, manifest) {
       </head>
       <body>
         <div id="app">${html}</div>
-        <script type="module" src="/src/main.js"></script>
+        <script type="module" src="/src/main.jsx"></script>
       </body>
     </html>
   `
