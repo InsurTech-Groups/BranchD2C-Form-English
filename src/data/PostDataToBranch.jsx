@@ -33,7 +33,12 @@ export const postDataToBranch = async (navigate) => {
 
   
 
-  axios.post('https://branch-d2-c-form-english.vercel.app/branch', postData)
+  axios({
+    method: 'POST',
+    url: 'https://branch-d2-c-form-english.vercel.app/branch',
+    data: postData,
+
+  })
     .then((res) => {
       console.log(res);
 
