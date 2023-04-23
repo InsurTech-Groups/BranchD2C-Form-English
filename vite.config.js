@@ -46,7 +46,8 @@ export default defineConfig({
     server: {
       hmr: {
         port: 443
-      }
+      },
+      host: true,
     },
 
     rollupOptions: {

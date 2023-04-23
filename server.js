@@ -8,6 +8,10 @@ app.use(cors());
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.send('Started Server Branch + ITG')
+})
+
 app.post('/branch', async (req, res) => {
 
   try {
@@ -33,7 +37,7 @@ app.post('/branch', async (req, res) => {
 });
 
 
-const PORT = 4000;
+const PORT = 4001;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

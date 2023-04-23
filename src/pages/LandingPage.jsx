@@ -1,6 +1,6 @@
 import React, { useEffect} from "react";
 import "../styles/LandingPage.css";
-import LandingHeaderPic from "../assets/HeaderImage.jpg";
+import LandingHeaderPic from "../assets/HomeImage.jpg";
 import { BoltIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline';
 import ZipCode from '../apis/zipCode'
 import FAQ from "../components/faq";
@@ -12,7 +12,7 @@ function LandingPage() {
   // TODO: Add Specific Form Type
   // TODO: Add Specific Form Header
 
-  let formType = 'Auto Insurance'
+  let formType = 'Home Insurance'
 
   useEffect(() => {
     ipAddress();
@@ -47,14 +47,14 @@ function LandingPage() {
         <div className="w-full pt-16 pb-20 mx-auto text-center max-w-7xl lg:py-48 lg:text-left">
           <div className="px-4 sm:px-8 lg:w-1/2 xl:pr-16">
             <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-              <span className="block xl:inline">Get Your Free</span> <br />
+              <span className="block xl:inline">Buy Your</span> <br />
               <span className="block text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
                 {formType} {' '}
               </span>
-              Quote
+              Online
             </h1>
             <p className="max-w-md mx-auto mt-3 text-lg text-white sm:text-xl md:mt-5 md:max-w-3xl">
-              Fill out a form in less than 3 minutes, and talk to an agent to get a quote tailored for you at a competitive price. Shopping for {formType} has never been easier.
+              Fill out a form in less than 3 minutes, and get a quote tailored for you at a competitive price. Shopping for {formType} has never been easier.
             </p>
               <ZipCode />
           </div>
@@ -87,7 +87,7 @@ function LandingPage() {
       </div>
       </div>
 
-<div className="elfsight-app-c43abc95-912b-4592-8284-6ee3d320a5a8 bg-input-purple"></div>
+<div className="elfsight-app-c43abc95-912b-4592-8284-6ee3d320a5a8 bg-input-purple pb-10"></div>
 
      
       <FAQ />

@@ -2,8 +2,11 @@
 
 import axios from 'axios';
 import { userData } from './userData';
+import { toast } from "react-toastify";
 
-export const postDataToBranch = async () => {
+export const postDataToBranch = async (navigate) => {
+
+
 
   let postData = {
     insuredInformation: {
@@ -30,13 +33,27 @@ export const postDataToBranch = async () => {
 
   
 
-  axios.post('http://localhost:4000/branch', postData)
+  axios.post('http://localhost:4001/branch', postData)
     .then((res) => {
       console.log(res);
+
+      userData.available = res.data.available;
+      userData.homePrice = res.data.homePriceHint;
+      userData.quoteURL = res.data.quoteUrl;
+
+      toast.success('Your Form Has Been Submitted!')
+      console.log(userData)
+      navigate('/thank-you')
     }
+    
   )
     .catch((err) => {
+
       console.log(err);
+      toast.error('Something Went Wrong!')
+     
+      
+      
     } 
   )
 

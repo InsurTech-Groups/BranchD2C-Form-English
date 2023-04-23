@@ -64,7 +64,7 @@ function Address() {
             <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
               What is your current{" "}
               <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 xl:inline">
-                Business Address
+                Home Address
               </span>
               ?
             </h2>

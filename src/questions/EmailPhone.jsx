@@ -117,7 +117,7 @@ let email = document.getElementById('email').value
       }
       else {
       //TODO: Add to userData
-      postDataToBranch();
+      postDataToBranch(navigate);
         navigate('/submit')
       }
     })

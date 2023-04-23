@@ -6,21 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const Submit = () => {
 
-
-  const navigate = useNavigate();
-
-  
-
-  useEffect(() => {
-
-    //set time out function that lasts 3 seconds
-    setTimeout(() => {
-     
-      navigate('/thank-you')
-    } 
-    , 4000)
-    
-  }, [])
   
 
 
@@ -34,9 +19,9 @@ const Submit = () => {
       <div className="flex flex-wrap align-middle">
         <div className="w-full md:w-full px-6 md:pl-12 lg:pr-0 text-center m-auto">
           <h3 className="mb-2 lg:text-4xl sm:text-lg font-medium text-white text-center">
-            <span data-config-id="header-p2">We are submitting your form...</span>
+            <span data-config-id="header-p2">Crunching some numbers...</span>
           </h3>
-          <p className="lg:text-xl sm:text-sm font-medium text-blue-100 text-center justify-center" data-config-id="desc">Please wait while we get you connected with an agent</p>
+          <p className="lg:text-xl sm:text-sm font-medium text-blue-100 text-center justify-center" data-config-id="desc">Please wait while we estimate a home insurance price made just for you!</p>
         </div>
 
       </div>

@@ -96,6 +96,7 @@ const DOB = () => {
                   pattern="(0[1-9]|1[0-2])\/([0-2][0-9]|3[0-1])\/\d{4}"
                   required
                   value={bDate}
+                  defaultValue={v}
                   onChange={handleExpDateChange}
                   className="w-full lg:text-xl text-center bg-input-purple text-white text-md rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-5 p-2.5"
                 />

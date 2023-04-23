@@ -5,11 +5,16 @@ import "../styles/forms.css";
 import Agent from '../assets/agent.jpg';
 import GetMoreQuotes from '../components/GetMoreQuotes';
 import WhyUsFeatures from '../components/WhyUsFeatures';
-
+import BranchPricingTable from '../components/BranchPricingTable';
+import NoPriceAvailable from '../components/NoPriceAvailable';
+import { userData } from '../data/userData';
 
 
 export default function ThankYou() {
 
+
+  let satus = userData.available;
+  console.log('userData', userData)
 
   //TODO:
     // Get timezone and dynamically show
@@ -24,24 +29,9 @@ export default function ThankYou() {
       <div className="formArea flex items-center py-5 px-4 sm:px-6 lg:px-4 flex-col">
         
 
+        {/* if status === 200 then show BranchPricingTable else show NoPriceAvailable */}
+        {satus ? <BranchPricingTable/> : <NoPriceAvailable/>}
 
-      <div className="py-2 lg:w-1/2 md:w-full sm:w-full mx-auto overflow-hidden rounded-lg">
-          <div className="flex flex-wrap align-middle justify-center">
-         
-        <div className="w-full md:w-full px-2 md:pl-12 lg:pr-0 text-center mx-auto">
-        <h2 className="mt-4 text-center text-4xl font-extrabold text-white">
-            An Agent Is Working On Your Quote!
-            </h2>
-
-            <p className="text-white text-lg mx-auto pt-5">
-             Keep an eye out! An agent will call you shortly to go over the next steps and get started on your quote and get you a price you love!
-              </p>
-               
-        </div>
-
-      </div>
-    </div>
-    <Lottie animationData={BusinessInsurance} loop={true} style={{height: '300px'}}  />
         <WhyUsFeatures />
         <div className="elfsight-app-c43abc95-912b-4592-8284-6ee3d320a5a8 w-full mb-5 pb-4 bg-input-purple"></div>
 

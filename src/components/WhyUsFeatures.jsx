@@ -27,7 +27,7 @@ const WhyUsFeatures = () => {
   
 
   return (
-    <div className="overflow-hidden bg-input-purple rounded-lg  mb-5 py-24 sm:py-32">
+    <div className="overflow-hidden bg-dark-purple rounded-lg  mb-5 py-24 sm:py-32">
     <div className="mx-auto md:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start align-middle justify-center">
         <div className="px-6 lg:px-0 lg:pt-4 lg:pr-4">
