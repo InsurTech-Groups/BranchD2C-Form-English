@@ -73,7 +73,7 @@ const DOB = () => {
 
   return (
     <div className="bg-dark-purple pb-10">
-      <Banner setProgress={20} />
+      <Banner setProgress={33} />
       <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
         <div className="m-w-1/2 space-y-8">
           <div>
@@ -117,7 +117,7 @@ const DOB = () => {
               </button>
             </div>
 
-            <LinkWithQuery to="/gender">Back</LinkWithQuery>
+            <LinkWithQuery to="/address">Back</LinkWithQuery>
           </form>
         </div>
       </div>

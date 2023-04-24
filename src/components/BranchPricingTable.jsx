@@ -40,12 +40,12 @@ const [url, setUrl] = useState('');
       <div className="mx-auto max-w-2xl sm:text-center">
         <h2 className="text-5xl font-bold tracking-tight text-white sm:text-4xl">{name}, Your Home Can Be Insured Today!</h2>
         <p className="mt-6 text-lg leading-8 text-white">
-            Based on your responses Branch<sup>&reg;</sup> & Insurtech Groups has found the best home insurance price for you.
+            Based on your responses Branch<sup>&reg;</sup> & Insurtech Groups has found the best estimated home insurance price for you.
         </p>
       </div>
       <div className="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-input-purple sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
         <div className="p-8 sm:p-10 lg:flex-auto">
-          <h3 className="text-2xl font-bold tracking-tight text-white">Home Insurance Price</h3>
+          <h3 className="text-2xl font-bold tracking-tight text-white">Estimated Home Insurance Price</h3>
           <p className="mt-6 text-base leading-7 text-white">
             Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque amet indis perferendis blanditiis
             repellendus etur quidem assumenda.
@@ -69,10 +69,10 @@ const [url, setUrl] = useState('');
         <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
           <div className="rounded-2xl bg-input-purple py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
             <div className="mx-auto max-w-xs px-8">
-                <p className="text-base font-semibold text-white">{name}'s Custom Home Insurance Price</p>
+                <p className="text-base font-semibold text-white">{name}'s Estimated Home Insurance Price</p>
               <p className="mt-6 flex items-baseline justify-center gap-x-2">
                   <span className="text-5xl font-bold tracking-tight text-white">{price}</span>
-                <span className="text-sm font-semibold leading-6 tracking-wide text-white">USD</span>
+                <span className="text-sm font-semibold leading-6 tracking-wide text-white">/year</span>
               </p>
               <a
                   href={url}

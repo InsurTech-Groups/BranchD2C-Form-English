@@ -38,7 +38,7 @@ const Relationship = () => {
     
       
       <div className="bg-dark-purple pb-10">
-      <Banner setProgress={40} />
+      <Banner setProgress={66} />
       
 
     <div className="formArea flex items-center justify-top mt-20 py-5 px-4 sm:px-6 lg:px-4 flex-col">
@@ -75,7 +75,7 @@ const Relationship = () => {
             })}
 
             </div>
-            <LinkWithQuery to="/ownership">Back</LinkWithQuery>
+            <LinkWithQuery to="/gender">Back</LinkWithQuery>
 
         </form>
       </div>

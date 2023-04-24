@@ -52,7 +52,7 @@ const Name = () => {
 
   return (
     <div className="bg-dark-purple pb-10">
-    <Banner setProgress={90} />
+    <Banner setProgress={83} />
     
 
 
@@ -121,7 +121,7 @@ const Name = () => {
         </button>
           </div>
 
-          <LinkWithQuery to="/address">Back</LinkWithQuery>
+          <LinkWithQuery to="/relationship">Back</LinkWithQuery>
         </form>
       </div>
     </div>
