@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.send('Started Server Branch + ITG')
 })
 
-app.post('https://branch-d2c.herokuapp.com/branch', async (req, res) => {
+app.post('/branch', async (req, res) => {
 
   try {
     const formData = req.body;
