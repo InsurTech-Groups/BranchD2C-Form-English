@@ -37,7 +37,7 @@ app.post('https://branch-d2-c-form-english.vercel.app/branch', async (req, res) 
 });
 
 
-const PORT = 4001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
