@@ -1,7 +1,7 @@
 
 
 import axios from 'axios';
-import { userData } from './userData';
+import { userData } from '../data/userData';
 import { toast } from "react-toastify";
 
 export const postDataToBranch = async (navigate) => {

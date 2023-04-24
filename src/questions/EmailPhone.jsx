@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import { userData } from '../data/userData';
 import axios from 'axios';
 import PhoneInput from "react-phone-number-input/input";
-import { postDataToBranch } from '../data/PostDataToBranch';
+import { postDataToBranch } from '../apis/PostDataToBranch';
 
 
 const EmailPhone = () => {
