@@ -1,6 +1,7 @@
 export const userData = {
 
 
-  'form_type': 'Commercial Form'
+  'form_type': 'Home Insurance Form',
+  'isDone': false,
 }
 

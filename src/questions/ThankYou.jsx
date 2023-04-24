@@ -15,6 +15,7 @@ export default function ThankYou() {
 
   let satus = userData.available;
   console.log('userData', userData)
+  userData.isDone = true;
 
   //TODO:
     // Get timezone and dynamically show

@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import Bugsnag from '@bugsnag/browser';
 import { landingPageData } from '../data/addToUserData';
-
+import { userData } from '../data/userData';
 function ZipCode() {
 
 
@@ -25,19 +25,15 @@ function ZipCode() {
 
 
 
-    // let id = localStorage.getItem('userId');
-    // let final = localStorage.getItem('done')
+    let isDone = userData.isDone;
 
-    // if (!id) {
-    //   localStorage.setItem('userId', uuidv4());
+    
+    if (isDone) {
 
-    // }
-    // if (final === 'yes') {
+      toast.success('Thank you for your submission!');
 
-    //   toast.success('Thank you for your submission!');
-
-    //   navigate('/thank-you')
-    // }
+      navigate('/thank-you')
+    }
     
   }, [])
   
