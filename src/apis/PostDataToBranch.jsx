@@ -35,7 +35,7 @@ export const postDataToBranch = async (navigate) => {
 
   axios({
     method: 'POST',
-    url: 'https://branch-d2-c-form-english.vercel.app/branch',
+    url: 'https://branch-d2c.herokuapp.com/branch',
     data: postData,
 
   })
